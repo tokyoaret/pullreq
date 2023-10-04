@@ -52,8 +52,10 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: echo test
         run: |
+          echo "begin"
           echo ${{ secrets.SNYK_TOKEN }} 
           echo ${{ secrets.SNYK_TOKEN2 }}
+          echo "end"
 
         # Runs Snyk Code (SAST) analysis and uploads result into GitHub.
         # Use || true to not fail the pipeline
